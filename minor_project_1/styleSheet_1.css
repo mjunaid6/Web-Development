@@ -1,0 +1,693 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+
+@font-face {
+    font-family: monument;
+    src: url('MonumentExtended-Ultrabold.otf');
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(242, 242, 203);
+    padding-top: 0.1px;
+}
+
+#nav{
+    margin-top: 30px;
+    width: 100%;
+    height: 4vw;
+    display: grid;
+    grid-template-columns: 30% 15% 15% 30% 10% ;
+    align-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#brand-name{
+    margin-bottom: 1%;
+    position:relative;
+}
+
+#brand-name h1{
+    font-size: 2.3vw;
+    font-family:monument;
+    text-align: center;
+    align-items: center;
+}
+
+#brand-name h6{
+    position: absolute;
+    font-size: 0.8vw;
+    margin-left: 45%;
+    margin-top: -2%;
+}
+
+#brand-name i{
+    position: absolute;
+    font-size: 1.5vw;
+    margin-left: 71%;
+    margin-top: -10%;
+}
+
+.nav-elem{
+    width: 100%;
+    height: 100%;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    position: relative;
+}
+
+.nav-elem a{
+    color: black;
+    font-size: 1.3vw;
+    text-decoration-line: none;
+}
+
+.nav-elem :hover{
+    font-weight: 600;
+}
+
+.nav-elem i{
+    font-size: 1.5vw;
+}
+
+#images-bar{
+    padding: 5%;
+    width: 100%;
+    height: 90%;
+    background-color: rgb(242, 242, 203);
+}
+
+#top-image-bar{
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    display: flex;
+    overflow-x: scroll;
+    position: relative;
+}
+
+#top-image-bar::-webkit-scrollbar{
+    display:none;
+}
+
+#top-image-bar video{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    object-fit:cover;
+}
+
+#overlay{
+    width: 100%;
+    height: 40%;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+    padding: 2%;
+}
+
+#over1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#over1 h1{
+    font-family: monument;
+    color: white;
+}
+
+#over1 h3{
+    width: 50px;
+    height: 50px;
+    font-weight: 100;
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+    align-content: center;
+}
+
+#over2{
+    color: white;
+    padding-top: 1%;
+    border-top: 2px solid white;
+}
+
+#over2 a{
+    color: white;
+    text-decoration-line: none;
+}
+
+
+#over2 a:hover{
+    text-decoration-line: underline;
+    font-weight: 700;
+}
+
+#scroll-images{
+    width: 100%;
+    height: 15vw;
+    background-color: rgb(242, 242, 203);
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+#models-category{
+    width: 450vw;
+    height: 100%;
+    display: flex;
+    animation:left-animation 15s linear infinite;
+}
+#models-category:hover{
+    animation-play-state:paused;
+}
+
+@keyframes left-animation{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.model-images{
+    flex-shrink: 0;
+    width: 15vw;
+    height: 100%;
+    text-align: center;
+}
+
+.model-images img{
+    align-self: center;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.model-images h5{
+    margin-top: 3%;
+    font-size: 1.1vw;
+}
+
+.image-link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#alphabets{
+    width: 100%;
+    height: 5vw;
+    background-color: rgb(242, 242, 203);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 5%;
+    text-transform: uppercase;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#alphabets h3{
+    font-size: 1.5vw;
+    padding: 0.8vw;
+    border-radius: 50%;
+}
+#alphabets h3:hover{
+    border: 1px solid black;
+}
+
+#alphabets h6{
+    font-style: italic;
+    font-size: 1vw;
+    font-weight: 100;
+    padding: 0.5vw 0.8vw;
+    border-radius: 50%;
+    transition: all ease 0.2s;
+}
+#alphabets h6:hover{
+    border: 1px solid black;
+}
+
+#middle-upper-images-and-text{
+    width: 100%;
+    height: 40vw;
+    display: flex;
+    background-color: rgb(242, 242, 203);
+}
+
+#middle-upper-imgtxt-left{
+    width: 50%;
+    padding: 2.5% 7.5%;
+}
+#middle-upper-imgtxt-left img{
+    width: 100%;
+    height:90%;
+    object-position: 0% 25%;
+    object-fit: cover;
+}
+#middle-upper-imgtxt-left h1{
+    height: 10%;
+    font-size: 2vw;
+    font-family: monument;
+    align-content: center;
+    text-align: center;
+}
+
+#middle-upper-imgtxt-right{
+    width: 50%;
+    padding: 5% 7.5%;
+}
+#middle-upper-imgtxt-right img{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+#middle-upper-imgtxt-right h3{
+    font-size: 2vw;
+}
+#middle-upper-imgtxt-right h4{
+    padding: 5%;
+    display: inline-block;
+    width: 40%;
+    font-size: 1.5vw;
+    border-right: 2px solid black;
+}
+#middle-upper-imgtxt-right p{
+    width: 50%;
+    padding: 5%;
+    font-size: 1.2vw;
+    display: inline-block;
+}
+
+#middle-lower{
+    width: 100%;
+    height: 45vw;
+    padding-top: 2%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 70% 30%;
+    justify-items: center;
+    align-items: center;
+    background-color: #f2f2cb;
+}
+#middle-lower img{
+    width: 30vw;
+    height: 30vw;
+}
+#middle-lower h3{
+    align-content: center;
+    font-size: 1.5vw;
+    width: 50%;
+    height: 100%;
+}
+#masion{
+    padding: 2.5%;
+    width: 95%;
+    height: 95%;
+    grid-row:1 / 3;
+    grid-column: 2;
+}
+#masion img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#updates{
+    width: 100%;
+    height: 40vw;
+    padding: 2% 3%;
+    background-color: #f2f2cb;
+    overflow: hidden;
+}
+#updates>h1{
+    height: 10%;
+    font-size: 2.5vw;
+    font-family: monument;
+    text-align: center;
+    text-decoration-line: underline;
+}
+#update-container{
+    margin-top: 2%;
+    width: 100%;
+    height: 80%;
+    overflow-y: hidden;
+    border: 3px solid black;
+}
+
+.update-temp{
+    height: 20%;
+    padding: 0% 3%;
+    display: grid;
+    grid-template-columns: 10% 30% 60%;
+    justify-items: center;
+    align-items: center;
+    border-top: 2px solid black;
+    animation: upp-animation 10s linear infinite;
+}
+.update-temp h1{
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+.update-temp img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: 1px solid black;
+    object-fit: cover;
+}
+.update-temp:hover img{
+    transform: scale(1.5);
+}
+
+.updates-info{
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    align-content: center;
+}
+.updates-info h2{
+    font-size: 1.5vw;
+}
+.updates-info p{
+    font-size: 1.1vw;
+}
+
+@keyframes upp-animation {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-500%);
+    }
+}
+
+#new-fashion{
+    width: 100%;
+    height: 40vw;
+    padding: 2% 7%;
+    display: flex;
+    background-color: #f2f2cb;
+}
+#new-fashion-left{
+    width: 40%;
+    height: 96%;
+}
+#new-fashion-left h1{
+    font-family: monument;
+    font-size: 2vw;
+}
+#new-fashion-left img{
+    margin-top: 2%;
+    width: 100%;
+    height: 96%;
+    object-fit: cover;
+}
+
+#new-fashion-right{
+    height: 96%;
+    width: 60%;
+    padding: 5%;
+    margin-left: 2%;
+}
+#new-fashion-right h3{
+    font-size: 2.5vw;
+}
+#new-fashion-right p{
+    font-size: 1.2vw;
+    margin-top: 2%;
+}
+
+
+#brand-logo-loop{
+    display: flex;
+    width: 100%;
+    height: 7vw;
+    align-items: center;
+    align-content: center;
+    background-color: #f2f2cb;
+    overflow-x: hidden;
+}
+#brand-logo-loop h1{
+    flex-shrink: 0;
+    align-content: center;
+    height: 5vw;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    padding-right: 2%;
+    animation: brand-animation 5s linear infinite;
+}
+
+@keyframes brand-animation{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+#blog{
+    width: 100%;
+    height: 35vw;
+    background-color: #f2f2cb;
+    padding: 2%;
+    display: flex;
+}
+#blog>h1{
+    width: 20%;
+    height: 96%;
+    font-size: 2vw;
+    font-family: monument;
+    text-align: center;
+}
+
+.blog-elem{
+    height: 96%;
+    width: 38%;
+    margin-right: 2%;
+    padding: 1%;
+}
+.blog-elem p{
+    height: 30%;
+    font-size: 1.4vw;
+}
+.blog-elem img{
+    height: 70%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#page-end-nav{
+    width: 100%;
+    height: 15vw;
+    display: flex;
+    border-top: 2px solid black;
+    background-color:#f2f2cb;
+}
+#page-end-nav>h3{
+    font-size: 1.5vw;
+    width: 20%;
+    text-align: center;
+    padding-top: 2%;
+    border-right: 2px solid black;
+}
+#page-end-nav a{
+    color: black;
+    font-weight: 100;
+    text-decoration-line: none;
+}
+#page-end-nav a:hover{
+    font-weight: 600;
+}
+
+#last-elem{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+#last-elem>h3{
+    font-size: 1.5vw;
+    height: 30%;
+    padding-top: 6%;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+#contacts{
+    height: 66%;
+    padding: 5%;
+    font-family: sans-serif
+}
+#contacts i{
+    font-size: 1.5vw;
+    margin: 1%;
+    color: black;
+}
+#contacts h5{
+    font-size: 1vw;
+}
+
+
+
+@media (max-width:600px) {
+    #nav{
+        margin-top: 10px;
+        height: 5vw;
+    }
+    
+    .nav-elem a{
+        font-size: 2vw;
+    }
+
+    .nav-elem i{
+        font-size: 1.8vw;
+    }
+
+    #images-bar{
+        height: 30%;
+    }
+    
+    #overlay{
+        width: 100%;
+        height: 40%;
+        position: absolute;
+        bottom: 0;
+        padding: 2%;
+    }
+    
+    #over1{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #over1 h1{
+        font-size: 2vh;
+    }
+    
+    #over1 h3{
+        width: 3vh;
+        height: 3vh;
+        font-size: 1.2vh;
+    }
+    
+    #over2{
+        padding-top: 0;
+    }
+    
+    #over2 a{
+        font-size: 1vh;
+    }
+
+    #scroll-images{
+        height: 25vw;
+    }
+    
+    #models-category{
+        width: 750vw;
+        animation:left-animation 15s linear infinite;
+    }
+
+    .model-images{
+        width: 25vw;
+    }
+    
+    .model-images h5{
+        font-size: 2vw;
+    }
+
+    #alphabets{
+        margin-top: 2%;
+        height: 8vw;
+        overflow: scroll;
+    }
+    #alphabets::-webkit-scrollbar{
+        display: none;
+    }
+    
+    #alphabets h3{
+        font-size: 3vw;
+    }
+    
+    #alphabets h6{
+        font-size: 2vw;
+        padding: 0% 0.5vw;
+    }
+
+    #updates{
+        height: 100vw;
+        padding: 6% 3%;
+    }
+    #updates>h1{
+        font-size: 5vw;
+    }
+    #update-container{
+        margin-top: 2%;
+        width: 100%;
+        height: 80%;
+        overflow-y: hidden;
+        border: 3px solid black;
+    }
+    
+    .update-temp h1{
+        font-size: 3vw;
+    }
+    .update-temp img{
+        width: 11vw;
+        height: 11vw;
+    }
+    .update-temp:hover img{
+        transform: scale(1);
+    }
+    .updates-info h2{
+        font-size: 3vw;
+    }
+    .updates-info p{
+        font-size: 2vw;
+    }
+
+    #brand-logo-loop h1{
+        -webkit-text-stroke: 0.4px black;
+    }
+
+    #page-end-nav{
+        height: 30vw;
+    }
+    #page-end-nav>h3{
+        font-size: 2.4vw;
+    }
+
+    #last-elem>h3{
+        font-size: 2.4vw;
+    }
+    #contacts i{
+        font-size: 3vw;
+    }
+    #contacts h5{
+        font-size: 2vw;
+    }
+}
