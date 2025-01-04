@@ -1,0 +1,564 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    background-color: white;
+}
+
+#nav{
+    position: relative;
+    width: 100%;
+    height: 4vw;
+    padding: 1% 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-left{
+    width: 40%;
+    display: flex;
+    padding-right: 5%;
+    justify-content: space-around;
+}
+#nav-left h4{
+    position: relative;
+    font-size: 1vw;
+    font-family: sans-serif;
+    color: black;
+}
+#nav-left h4:hover{
+    color: rgb(95, 95, 95);
+}
+
+#dribble-logo{
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+#dribble-logo img{
+    width: 40%;
+}
+
+#nav-right{
+    width: 20%;
+    display: flex;
+    justify-content: end;
+}
+#nav-right button{
+    position: relative;
+    margin: 2%;
+    width: 5vw;
+    height: 2.5vw;
+    border-radius: 2.5vw;
+    border: none;
+    font-size: 0.9vw;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+}
+#nav-right button:hover{
+    background-color: rgb(95, 95, 95);
+}
+#nav-right button:nth-child(1){
+    color: black;
+    background-color: transparent;
+}
+#nav-right button:nth-child(1):hover{
+    color: rgb(95, 95, 95);
+}
+
+.link{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#after-nav{
+    width: 100%;
+    height: 20vw;
+    padding: 5%;
+    text-align: center;
+    /* background-color: brown; */
+}
+#after-nav h1{
+    font-size: 4vw;
+    color: black;
+    font-weight: 100;
+}
+#after-nav h3{
+    margin-top: 1%;
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    font-weight: 300;
+    color: black;
+}
+
+#search-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 4vw;
+    margin: 2% 25% ;
+    border-radius: 2vw;
+    background:linear-gradient(to right,rgb(204, 204, 204),rgb(218, 217, 217),rgb(204, 204, 204));
+}
+#search-bar:hover{
+    border: 3px solid rgb(230, 229, 229);
+    background: white;
+}
+
+#search-bar input{
+    margin-left: 2vw;
+    width: 90%;
+    height: 100%;
+    border: none;
+    font-size: 1.2vw;
+    font-family: sans-serif;
+    color:rgb(155, 153, 153);
+    background: transparent;
+}
+#search-bar input::placeholder{
+    font-family: sans-serif;
+    font-size: 1vw;
+    color: rgb(171, 170, 170);
+}
+#search-bar input:focus{
+    outline: none;
+}
+
+#search-bar button{
+    margin-right: 1vw;
+    align-content: center;
+    text-align: center;
+    width: 1.5vw;
+    height: 1.5vw;
+    border: none;
+    background: transparent;
+}
+#search-bar i{
+    color: rgb(176, 169, 169);
+    font-size: 1.5vw;
+    background-color: transparent;
+}
+
+#treanding-search{
+    width: 100%;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#treanding-search h3{
+    margin: 0% 3%;
+    font-size: 0.8vw;
+    font-family: sans-serif;
+}
+
+#treanding-search h4{
+    position: relative;
+    margin: 0% 2%;
+    padding: 0.2% 0.8%;
+    border-radius: 0.8vw;
+    font-size: 0.9vw;
+    background:linear-gradient(to right,rgb(204, 204, 204),rgb(218, 217, 217),rgb(204, 204, 204));
+}
+#treanding-search h4:hover{
+    background: transparent;
+}
+
+#img-vid-scroll{
+    width: 100%;
+    height: 20vw;
+    margin: 3% 0%;
+    overflow-x: hidden;
+}
+
+#scroll-container{
+    width: 300vw;
+    height: 100%;
+    display: flex;
+    animation:left-animation 20s linear infinite;
+}
+#scroll-container:hover{
+    animation-play-state: paused;
+}
+
+@keyframes left-animation{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+.scrolling-img{
+    flex-shrink: 0;
+    width: 15vw;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container{
+    width: 95%;
+    height: 95%;
+    position: relative;
+    border-radius: 2.5vw;
+    overflow: hidden;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1;
+}
+.img-container img:hover{
+    scale: 1.5;
+}
+
+.img-container video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 1;
+}
+.img-container video:hover{
+    scale: 1.5;
+}
+.bottom-shadow{
+    position: absolute;
+    justify-self: center;
+    width: 100%;
+    height: 30%;
+    bottom: 0%;
+    background: linear-gradient(to bottom,transparent,black);
+    transition: all ease 0.3s;
+}
+.img-container:hover .bottom-shadow{
+    height: 40%;
+}
+
+.name{
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    color: white;
+    font-size: 1.2vw;
+}
+.occupation{
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.tags-container{
+    width: 90%;
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    display: flex;
+    overflow-x: hidden;
+}
+.tags-container h5{
+    color: white;
+    font-size: 1vw;
+    margin-right: 10%;
+    padding: 0.2% 1.5%;
+    border-radius: 1vw;
+    border: 1px solid white;
+}
+
+#filters{
+    width: 100%;
+    height: 5vw;
+    padding: 0% 4%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#filters button{
+    width: 7%;
+    height: 2vw;
+    font-size: 1vw;
+    border-radius: 1vw;
+    border: none;
+    position: relative;
+}
+#filters button:hover{
+    background-color: rgb(204, 204, 204);
+}
+
+#discover{
+    position: relative;
+    font-size: 1vw;
+    font-family: sans-serif;
+    padding: 0.5% 1%;
+    border-radius: 1vw;
+    background-color: rgb(204, 204, 204);
+}
+#discover:hover{
+    color: rgb(204, 204, 204);
+    background-color: transparent;
+}
+.filter-elem{
+    font-size: 1vw;
+    font-family: sans-serif;
+    position: relative;
+}
+.filter-elem:hover{
+    color: rgb(204, 204, 204);
+}
+
+#explore-page{
+    width: 100%;
+    height: 80vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 1%;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: 23% 23% 23% 23%;  
+}
+
+.explore-elem{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.explore-img-container{
+    position: relative;
+    width: 95%;
+    height: 90%;
+    border-radius: 1vw;
+    transition: all ease 0.4s;
+    overflow: hidden;
+}
+.explore-img-container:hover{
+    box-shadow: 5px -5px 20px rgb(88, 87, 87);
+}
+
+.explore-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.explore-img-container>.bottom-shadow{
+    padding: 8% 5%;
+    display: flex;
+    justify-content: space-between;
+    bottom: -30%;
+    transition: all ease 0.4s;
+}
+.explore-img-container:hover .bottom-shadow{
+    bottom: 0;
+}
+.explore-img-container>.bottom-shadow>h4{
+    font-size: 1.2vw;
+    font-weight: 200;
+    color: white;
+}
+.explore-img-container>.bottom-shadow>i{
+    width: 1.5vw;
+    height: 1.5vw;
+    font-size: 1.2vw;
+    text-align: center;
+    align-content: center;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+}
+.explore-img-container>.bottom-shadow>i:hover{
+    color: white;
+    background-color: black;
+}
+
+.explore-text{
+    width: 95%;
+    padding: 1%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explore-text-left{
+    width: 60%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.explore-text-left img{
+    width: 1.5vw;
+    height: 1.5vw;
+    left: 0;
+    margin-right: 5%;
+    border-radius: 50%;
+}
+.explore-text-left h4{
+    font-size: 1vw;
+}
+
+.explore-text-right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.explore-text-right i{
+    color: grey;
+}
+.explore-text-right i:nth-child(1):hover{
+    color: pink;
+}
+.explore-text-right i:nth-child(3):hover{
+    color: black;
+}
+.explore-text-right p{
+    font-size: 1vw;
+}
+
+#middle-button{
+    width: 100%;
+    height: 5vw;text-align: center;
+    align-content: center;
+}
+#middle-button>button{
+    position: relative;
+    padding: 0.5% 1%;
+    font-size: 1.1vw;
+    font-weight: 100;
+    border-radius: 1.5vw;
+    border: none;
+    color: aliceblue;
+    background-color: black;
+}
+#middle-button>button:hover{
+    background-color: rgb(95, 95, 95);
+}
+
+#middle-text{
+    width: 100%;
+    height: 25vw;
+    padding: 3% 2%;
+    text-align: center;
+    background-color: rgb(254, 180, 77);
+}
+#middle-text>h1{
+    font-size: 4vw;
+    font-weight: 600;
+    margin-bottom: 1%;
+}
+#middle-text>h3{
+    font-size: 1.2vw;
+    margin-bottom: 1%;
+}
+#middle-text>button{
+    position: relative;
+    display: inline-block;
+    padding: 0.5% 1%;
+    font-size: 1vw;
+    margin-right: 1%;
+    border-radius: 1vw;
+    border: none;
+    margin-bottom: 1%;
+}
+#middle-text>button:hover{
+    color: white;
+    background-color: rgb(95, 95, 95);
+}
+#middle-text>button:nth-of-type(1){
+    color: white;
+    background-color: black;
+}
+#middle-text>button:nth-of-type(1):hover{
+    background-color: rgb(95, 95, 95);
+}
+
+#middle-text>h4{
+    font-size: 1.3vw;
+    display: inline-block;
+}
+#middle-text>a{
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: black;
+}
+
+
+#end-nav{
+    width: 100%;
+    height: 5vw;
+    padding: 0% 10%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#end-nav>#dribble-logo{
+    width: 15%;
+    text-align: center;
+}
+
+#social-links{
+    width: 10%;
+}
+
+#social-links a{
+    font-size: 1.3vw;
+    color: black;
+    text-decoration-line: none;
+    margin: 1%;
+}
+
+#page-end{
+    width: 100%;
+    height: 5vw;
+    padding: 1% 7%;
+    display: flex;
+    font-size: 1vw;
+    font-family: sans-serif;
+    color: gray;
+    justify-content: space-between;
+}
+#page-end i{
+    font-size: 1.1vw;
+    font-weight: 600;
+}
+#page-end h4{
+    position: relative;
+}
+#page-end h4:hover{
+    color: black;
+}
+#page-end-left{
+    width: 30%;
+    display: flex;
+    gap: 2%;
+}
+#page-end-right{
+    display: flex;
+    width: 60%;
+    justify-content: end;
+    gap: 2%;
+}
